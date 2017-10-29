@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 /*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
 
 /*
@@ -210,7 +212,7 @@ header {
 	width: 540px;
 	height: 82px;
 	margin: 0 auto;
-	background-image: url('/img/logo.png');
+	background-image: url('../img/logo.png');
 	background-repeat: no-repeat;
 	background-size: 540px 82px;
 	}
@@ -351,7 +353,7 @@ nav a {
 
 .third-width-column .icon.exit {
 	background-color: #233951;
-	background-image: url('/img/handshake.png');
+	background-image: url('../img/handshake.png');
 	background-repeat: no-repeat;
 	background-size: 60px auto;
 	background-position: 20px 28px;
@@ -456,8 +458,8 @@ nav a {
 	background-size: 300px;
 	}
 
-#ulf .person-bild {	background-image: url('/img/ulf.jpg'); }
-#helena .person-bild { background-image: url('/img/helena.jpg'); }
+#ulf .person-bild {	background-image: url('../img/ulf.jpg'); }
+#helena .person-bild { background-image: url('../img/helena.jpg'); }
 
 .person-text h1 {
 	text-transform: uppercase;
@@ -654,10 +656,10 @@ footer a:hover {
 (-webkit-min-device-pixel-ratio: 2), 
 (min-resolution: 192dpi) { 
 
-.logo {	background-image: url('/img/logo@2x.png'); }
-.third-width-column .icon.exit { background-image: url('/img/handshake@2x.png'); }
-#ulf .person-bild {	background-image: url('/img/ulf@2x.jpg'); }
-#helena .person-bild { background-image: url('/img/helena@2x.jpg'); }
+.logo {	background-image: url('../img/logo@2x.png'); }
+.third-width-column .icon.exit { background-image: url('../img/handshake@2x.png'); }
+#ulf .person-bild {	background-image: url('../img/ulf@2x.jpg'); }
+#helena .person-bild { background-image: url('../img/helena@2x.jpg'); }
 
 
 }
