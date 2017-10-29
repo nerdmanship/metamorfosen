@@ -186,20 +186,10 @@ section .container > h1 {
 /* ===================================================================== */
 
 header {
-	background: rgba(255,255,255,1);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 24%, rgba(246,246,246,1) 67%, rgba(230,230,230,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, , color-stop(0%, rgba(255,255,255,1)), color-stop(24%, rgba(255,255,255,1)), color-stop(67%, rgba(246,246,246,1)), color-stop(100%, rgba(230,230,230,1)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 24%, rgba(246,246,246,1) 67%, rgba(230,230,230,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 24%, rgba(246,246,246,1) 67%, rgba(230,230,230,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 24%, rgba(246,246,246,1) 67%, rgba(230,230,230,1) 100%);
-	background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 24%, rgba(246,246,246,1) 67%, rgba(230,230,230,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=1 );
-	box-shadow: 0px 2px 5px 2px rgba(0,0,0,0.5);
-
 	height: 600px;
 	width: 100%;
 	position: relative;
-	}
+}
 
 .top-bar-container {
 	width: 100%;
@@ -243,7 +233,7 @@ header {
 	}
 
 .top-nav {
-	max-width: 500px;
+	max-width: 600px;
 	margin: 0 auto;
 	}
 
@@ -254,13 +244,14 @@ ul {
 
 nav li {
 	display: inline-block;
-	margin: 0;
-	width: 120px;
+	margin: 0 20px;
+	border-bottom: 1px solid #686868;
+	transition: border-bottom 0.2s;
 	}
 
-#kompensera {
-	margin-right: 7px;
-	}
+nav li:hover {
+	border-bottom-width: 10px;
+}
 
 nav a {
 	text-align: center;
@@ -271,48 +262,12 @@ nav a {
 	letter-spacing: 2px;
 	font-weight: 700;
 	color: #686868;
-	transition: border-bottom 0.2s;
-	}
-
-		
-#link-kom {
-	color: #233951;
-	border-bottom: 1px solid #233951;
-	}
-	
-#link-om {
-	color: #436593;
-	border-bottom: 1px solid #436593;
-	}
-	
-#link-kon {
-	color: #7fa8d4;
-	border-bottom: 1px solid #7fa8d4;
-	}
-
-#link-kom:hover {
-	border-bottom: 10px solid #233951;
-	}
-	
-#link-om:hover {
-	border-bottom: 10px solid #436593;
-	}
-	
-#link-kon:hover {
-	border-bottom: 10px solid #7fa8d4;
 	}
 
 .divider {
 	width: 100%;
 	height: 30px;
-	background: rgba(35,57,81,1);
-	background: -moz-linear-gradient(left, rgba(35,57,81,1) 0%, rgba(67,101,147,1) 50%, rgba(127,168,212,1) 100%);
-	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(35,57,81,1)), color-stop(50%, rgba(67,101,147,1)), color-stop(100%, rgba(127,168,212,1)));
-	background: -webkit-linear-gradient(left, rgba(35,57,81,1) 0%, rgba(67,101,147,1) 50%, rgba(127,168,212,1) 100%);
-	background: -o-linear-gradient(left, rgba(35,57,81,1) 0%, rgba(67,101,147,1) 50%, rgba(127,168,212,1) 100%);
-	background: -ms-linear-gradient(left, rgba(35,57,81,1) 0%, rgba(67,101,147,1) 50%, rgba(127,168,212,1) 100%);
-	background: linear-gradient(to right, rgba(35,57,81,1) 0%, rgba(67,101,147,1) 50%, rgba(127,168,212,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#233951', endColorstr='#7fa8d4', GradientType=1 );
+	background: #686868;
 	}
 
 
@@ -433,10 +388,6 @@ nav a {
 
 /* ===================================================================== */
 
-#om-oss {
-	background-color: #f6f6f6;
-	}
-
 .person {
 	max-width: 960px;
 	margin: 0 auto;
@@ -544,53 +495,6 @@ nav a {
 	margin: 0 auto 0px;
 }
 
-/* ===================================================================== */
-
-/*		NAVIGATION BARS													 */
-
-/* ===================================================================== */
-
-.nav-divider {
-	transition:letter-spacing 100ms, background-color 400ms, color 200ms;
-	margin: 0px auto;		
-	padding: 15px 0px;
-	border-top: 1px solid rgba(0,0,0,0.05);
-	color: rgba(0,0,0,0.4);
-	font-size: 14px;
-	font-weight: 700;
-	text-decoration: none;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	}
-	
-.nav-divider:hover {
-	color: rgba(0,0,0,0.6);
-	background-color: #c0c0c0;
-	letter-spacing: 1px;
-	}
-
-#up-nav {
-	padding: 0 0;
-	border-top: none;
-	margin: 0px 0px;
-	float: right;	
-	}
-#up-nav:hover {
-	background-color: transparent;
-	color: rgba(255,255,255,0.4);
-	letter-spacing: 3px;
-	}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -603,32 +507,18 @@ nav a {
 footer {
 	padding: 50px;
 	text-align: center;	
-	background: rgba(51,51,51,1);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 48%, rgba(48,48,48,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, , color-stop(0%, rgba(51,51,51,1)), color-stop(48%, rgba(51,51,51,1)), color-stop(100%, rgba(48,48,48,1)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 48%, rgba(48,48,48,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 48%, rgba(48,48,48,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 48%, rgba(48,48,48,1) 100%);
-	background: radial-gradient(ellipse at center, rgba(51,51,51,1) 0%, rgba(51,51,51,1) 48%, rgba(48,48,48,1) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#333333', endColorstr='#303030', GradientType=1 );
-	box-shadow: 0px -2px 4px 1px rgba(0,0,0,0.6);
 	}
 	
 footer p {
 	font-size: 12px;
 	font-weight: 400;
-	color: #ccc;
 	letter-spacing: 1px;
 	}
 	
 footer a {
-	color: #999;
 	text-decoration: none;
 	}
 	
-footer a:hover {
-	color: #fff;
-	}
 .disclaimer { padding-bottom: 20px; line-height: 18px; }
 
 .copyright {
@@ -637,7 +527,9 @@ footer a:hover {
 	}
 
 
-
+.specifikation {
+	text-align: left;
+}
 
 
 
