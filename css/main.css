@@ -185,32 +185,23 @@ section .container > h1 {
 
 /* ===================================================================== */
 
-header {
-	height: 600px;
-	width: 100%;
-	position: relative;
-}
-
-.top-bar-container {
-	width: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	padding-top: 125px;
-	}
-	
-.logo {
-	width: 540px;
-	height: 82px;
-	margin: 0 auto;
-	background-image: url('../img/logo.png');
-	background-repeat: no-repeat;
-	background-size: 540px 82px;
-	}
 
 .intro {
-	width: 100%;
-	max-width: 800px;
-	margin: 0 auto;
+    
+    width: 100%;
+    max-width: 1200px;
+    padding: 125px 0;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    }
+
+.logo {
+	width: 300px;
+	height: 45px;
+	background-image: url('../img/logo.png');
+	background-repeat: no-repeat;
+	background-size: cover;
 	}
     
 .intro h1 {
@@ -218,8 +209,7 @@ header {
 	line-height: 30px;
 	font-weight: 700;
 	color: #484848;
-	margin: 25px auto;
-	text-align: center;
+	margin: 25px 0;
 	}
 
 .intro p {
@@ -227,42 +217,46 @@ header {
 	line-height: 30px;
 	font-weight: 400;
 	color: #585858;
-	max-width: 500px;
-	margin: 0 auto 65px;
-	text-align: center;
+	margin: 0;
 	}
 
 .top-nav {
 	max-width: 600px;
-	margin: 0 auto;
+	margin: 0;
 	}
 
 ul {
 	padding: 0;
-	text-align: center;
 	}
+li:first-child {
+    margin-left: 0;
+}
+
+li:last-child {
+    margin-right: 0;
+}
 
 nav li {
 	display: inline-block;
 	margin: 0 20px;
-	border-bottom: 1px solid #686868;
-	transition: border-bottom 0.2s;
 	}
 
-nav li:hover {
-	border-bottom-width: 10px;
-}
 
 nav a {
-	text-align: center;
-	position: relative;
-	text-decoration: none;
-	text-transform: uppercase;
-	font-size: 12px;
-	letter-spacing: 2px;
-	font-weight: 700;
-	color: #686868;
-	}
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: #686868;
+    border-bottom: 1px solid rgba(0,0,0,0);
+    }
+
+nav a:hover {
+    color: #333333;
+    border-bottom: 1px solid #686868;
+}
 
 .divider {
 	width: 100%;
@@ -339,18 +333,10 @@ nav a {
 	text-transform: uppercase;
 	font-size: 14px;
 	margin-top: 20px;
-	margin-left: 10px;
-	text-align: center;
 	}
-	
-#exit h2 { color: #233951; }
-#book h2 { color: #436593; }
-#watt h2 { color: #7fa8d4; }
 
 .third-width-column p {
-	text-align: center;
 	color: #585858;
-	margin: 15px 10px 0 10px;
 	}
 
 .third-width-column a {
@@ -479,7 +465,6 @@ nav a {
 	color: #585858;
 	max-width: 650px;
 	margin: 0 auto 20px;
-	text-align: center;
 	font-style: italic;
 	}
 
@@ -506,7 +491,6 @@ nav a {
 
 footer {
 	padding: 50px;
-	text-align: center;	
 	}
 	
 footer p {
@@ -525,11 +509,6 @@ footer a {
 	padding-top: 20px;
 	color: #686868;
 	}
-
-
-.specifikation {
-	text-align: left;
-}
 
 
 
@@ -571,7 +550,6 @@ footer a {
 	}
 	
 .third-width-column p {
-	text-align: center;
 	color: #585858;
 	margin: 15px auto 0;
 	max-width: 600px;
@@ -581,7 +559,6 @@ footer a {
 
 .person {
 	margin-top: 50px;
-	text-align: center;
 	}
 	
 .person-text {
@@ -714,7 +691,6 @@ header {
 
 ul {
 	padding: 0;
-	text-align: center;
 	}
 
 nav li {
@@ -738,7 +714,6 @@ nav li {
 
 .person {
 	margin-top: 50px;
-	text-align: center;
 	}
 	
 .person-text {
