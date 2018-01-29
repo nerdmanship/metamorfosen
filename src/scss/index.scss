@@ -1,0 +1,350 @@
+@import "./bootstrap";
+
+
+// VARS
+$meta-light: hsla(215, 48%, 68%, 1);
+$meta-mid: hsla(215, 31%, 42%, 1);
+$meta-dark: hsla(214, 33%, 23%, 1);
+$meta-mute: transparentize($meta-dark, 0.25);
+$meta-shadow: 0px 2px 5px 1px transparentize($meta-dark, 0.8);
+$bg-color: red;
+
+// $pro-base: hsla(205, 0%, 50%, 1);
+// $pro-dark: darken($pro-base, 20%);
+// $pro-darker: darken($pro-base, 30%);
+// $pro-light: lighten($pro-base, 20%);
+// $pro-lighter: lighten($pro-base, 30%);
+$pro-base: red;
+$pro-dark: red;
+$pro-darker: red;
+$pro-light: red;
+$pro-lighter: red;
+
+
+
+// GENERAL
+body {
+    // background-color: #eee;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $meta-dark;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: transparentize($meta-dark, 0.5);
+    font-size: 1.2rem;
+    border-bottom: 2px solid transparentize($meta-dark, 0.8);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: $meta-dark;
+    font-size: 1.3rem;
+}
+
+
+h4 {
+    color: $meta-mute;
+    font-size: 0.9rem;
+}
+
+p,
+li {
+    color: $meta-mute;
+}
+
+a {
+    color: $meta-mid;
+    text-decoration: underline;
+}
+
+section {
+    margin: 150px 0;
+}
+
+
+.card {
+    border: none;
+    box-shadow: $meta-shadow;
+}
+
+// SPECIFIC
+.grad-box {
+    position: absolute;
+    z-index: -1;
+    height: 20px;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(45deg, $meta-dark 25%, $meta-mid 25%, $meta-mid 60%, $meta-light 60%);
+}
+
+#nav {
+    border-top: 10px solid $pro-base;
+    ul {
+        border-bottom: 1px solid $pro-light;
+    }
+}
+
+#header {
+    img { width: 200px; }
+    margin-top: 100px;
+    .fatty {
+        font-weight: 700;
+    }
+    h1 {
+        line-height: 4rem;
+        margin: 50px 0 30px;
+    }
+    p {
+        color: $meta-mute;
+        letter-spacing: 1px;
+    }
+}
+
+#intro {
+    .intro-border {
+        border-top: 5px solid $meta-dark;
+        padding-top: 30px;
+    }
+    svg {
+        width: 50px;
+        float: left;
+        margin-top: 4px;
+        margin-right: 12px;
+        .paths {
+            fill: $meta-dark;
+        }
+    }
+    p {
+        font-size: 1rem;
+        font-weight: 300;
+        color: $meta-dark;
+        line-height: 2rem;
+    }
+    span.intro-intro {
+        font-weight: 700;
+    }
+}
+
+#competence {
+    .card-group {
+        box-shadow: $meta-shadow;
+    }
+    .card {
+        box-shadow: none;
+    }
+    .card-img-top {
+        width: 96px;
+    }
+    p {
+        // font-size: 1rem;
+        // font-weight: 300;
+    }
+
+    @include media-breakpoint-down(sm) {
+        .card-group {
+            flex-direction: column;
+            box-shadow: none;
+        }
+        .card {
+            box-shadow: $meta-shadow;
+            margin-top: 20px;
+        }
+        .card:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+#services {
+    .intensity {
+        width: 100%;
+        height: 1.5em;
+        background-color: $pro-dark;
+        border-radius: 4px 4px 0 0;
+    }
+    #intense {
+        .intensity {
+            background: linear-gradient(45deg, $meta-light 30%, lighten($meta-light, 10%) 30%);
+        }
+        li::before {
+            color: $meta-light;
+        }
+    }
+
+    #coach {
+        .intensity {
+            background: linear-gradient(45deg, $meta-mid 30%, $meta-light 30%);
+        }
+        li::before {
+            color: $meta-mid;
+        }
+    }
+
+    #board {
+        .intensity {
+            background: linear-gradient(45deg, $meta-dark 30%, $meta-mid 30%);
+        }
+        li::before {
+            color: $meta-dark;
+        }
+    }
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    li::before {
+        content: "•";
+        padding-right: 10px;
+    }
+    li {
+        padding-left: 20px;
+        text-indent: -.7em;
+    }
+    @include media-breakpoint-down(md) {
+        .card-deck {
+            flex-direction: column;
+        }
+        .card {
+            margin-top: 20px;
+        }
+        .card:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+#about {
+    .about-header {
+        width: 100%;
+    }
+
+    .about-portrait {
+
+        display: inline-block;
+        width: 30%;
+        float: left;
+        img {
+            border-radius: 4px 0 0;
+            width: 100%;
+        }
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            img {
+                border-radius: 4px 4px 0 0;
+            }
+        }
+    }
+
+    .about-info {
+        @include media-breakpoint-down(sm) {
+            h3 {
+                font-size: 1.2rem;
+                letter-spacing: 0;
+            }
+        }
+        display: inline-block;
+        margin-left: 20px;
+        margin-top: 20px;
+    }
+
+
+    .about-info-item {
+        margin: 0;
+    }
+
+    .about-info-links {
+        margin-top: 0.8rem;
+        .badge {
+            background-color: $meta-mid;
+        }
+        .badge a {
+            text-decoration: none;
+        }
+        .badge:last-child {
+            margin-left: 10px;
+        }
+    }
+
+    .about-desc {
+        padding: 20px;
+    }
+}
+
+#testimonials {
+    .quotes {
+        position: relative;
+        min-height: 200px;
+    }
+
+    .quotes blockquote {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        transition: opacity 1s ease;
+        display: none;
+        p:first-child {
+            font-size: 1.2rem;
+            font-style: italic;
+            font-weight: 300;
+            color: $meta-mute;
+        }
+        p:nth-child(2) {
+            margin-top: 20px;
+        }
+        p {
+            margin: 0;
+        }
+        .owner {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+
+    .quotes .active {
+        display: block;
+        opacity: 1;
+        animation-name: fadeIn;
+        animation-duration: 5s;
+    }
+}
+
+#contact {
+    padding: 30px;
+    background-color: $meta-dark;
+    p {
+        margin: 0;
+       color: transparentize(lighten($meta-dark, 35%), 0.1);
+    }
+    .copyright {
+        margin-top: 10px;
+        color: transparentize(lighten($meta-dark, 35%), 0.4);
+        font-weight: 300;
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    10% {
+        opacity: 1
+    }
+    90% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
