@@ -7000,7 +7000,7 @@ section {
 #header {
   margin-top: 100px; }
   #header img {
-    width: 200px; }
+    width: 240px; }
   #header .fatty {
     font-weight: 700; }
   #header h1 {
@@ -7173,12 +7173,19 @@ section {
   opacity: 1;
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s; }
+  -webkit-animation-duration: 7s;
+          animation-duration: 7s; }
 
 #contact {
   padding: 30px;
   background-color: #27384e; }
+  #contact img {
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    top: -100px; }
   #contact p {
     margin: 0;
     color: rgba(113, 143, 183, 0.9); }
