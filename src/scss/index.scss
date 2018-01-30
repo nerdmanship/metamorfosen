@@ -96,7 +96,7 @@ section {
 }
 
 #header {
-    img { width: 200px; }
+    img { width: 240px; }
     margin-top: 100px;
     .fatty {
         font-weight: 700;
@@ -315,13 +315,20 @@ section {
         display: block;
         opacity: 1;
         animation-name: fadeIn;
-        animation-duration: 5s;
+        animation-duration: 7s;
     }
 }
 
 #contact {
     padding: 30px;
     background-color: $meta-dark;
+    img {
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -100px;
+    }
     p {
         margin: 0;
        color: transparentize(lighten($meta-dark, 35%), 0.1);
