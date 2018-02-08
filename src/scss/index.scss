@@ -187,7 +187,7 @@ section {
             background: linear-gradient(45deg, $meta-mid 30%, $meta-light 30%);
         }
         li::before {
-            color: $meta-mid;
+            color: $meta-light;
         }
     }
 
@@ -196,7 +196,7 @@ section {
             background: linear-gradient(45deg, $meta-dark 30%, $meta-mid 30%);
         }
         li::before {
-            color: $meta-dark;
+            color: $meta-light;
         }
     }
     ul {
