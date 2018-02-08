@@ -7073,13 +7073,13 @@ section {
   background: linear-gradient(45deg, #4a668c 30%, #86a7d5 30%); }
 
 #services #coach li::before {
-  color: #4a668c; }
+  color: #86a7d5; }
 
 #services #board .intensity {
   background: linear-gradient(45deg, #27384e 30%, #4a668c 30%); }
 
 #services #board li::before {
-  color: #27384e; }
+  color: #86a7d5; }
 
 #services ul {
   list-style: none;
