@@ -10,18 +10,26 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <title>Metamorfosen – Senior Advisors</title>
     <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 </head>
 
 <body>
     <div class="grad-box"></div>
-    <header id="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-lg-6">
-                    <img src="./images/logo@2x.png" alt="Logotype">
-                    <h1 class="display-3 pt-3 text-uppercase">Senior<br> <span class="fatty">Advisors</span></h1>
-                    <p class="lead ">Metamorfosen arbetar genom Ulf Strömqvist med advisory boards, VD-coaching och kvalificerade rådgivningsuppdrag i ägarledda företag.</p>
-                </div>
+    <header id="header" class="container">
+        <svg class="header-bubbles transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600">
+            <g class="golden-group" filter="url(#goo)">
+                <use class="golden-1 transition-all" xlink:href="#golden-1" />
+                <use class="golden-2 transition-all" xlink:href="#golden-2" />
+                <use class="golden-3 transition-all" xlink:href="#golden-3" />
+                <use class="golden-4 transition-all" xlink:href="#golden-4" />
+                <use class="golden-5 transition-all" xlink:href="#golden-5" />
+            </g>
+        </svg>
+        <div class="row">
+            <div class="col-md-8 col-lg-6">
+                <img src="./images/logo@2x.png" alt="Logotype">
+                <h1 class="display-3 pt-3 text-uppercase">Senior<br> <span class="fatty">Advisors</span></h1>
+                <p class="lead ">Metamorfosen arbetar genom Ulf Strömqvist med advisory boards, VD-coaching och kvalificerade rådgivningsuppdrag i ägarledda företag.</p>
             </div>
         </div>
     </header>
@@ -42,6 +50,12 @@
     </section>
     <main class="container">
         <section id="competence">
+            <svg class="competence-bubbles transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600">
+                <g class="golden-group" filter="url(#goo)">
+                    <use class="golden-1 transition-all" xlink:href="#golden-1" />
+                    <use class="golden-2 transition-all" xlink:href="#golden-2" />
+                </g>
+            </svg>
             <div class="row">
                 <div class="col">
                     <h2>Kompetens</h2>
@@ -72,6 +86,13 @@
             </div>
         </section>
         <section id="services">
+            <svg class="services-bubbles transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600">
+                <g class="golden-group" filter="url(#goo)">
+                    <use class="golden-3 transition-all" xlink:href="#golden-3" />
+                    <use class="golden-4 transition-all" xlink:href="#golden-4" />
+                    <use class="golden-5 transition-all" xlink:href="#golden-5" />
+                </g>
+            </svg>
             <div class="row">
                 <div class="col">
                     <h2>Våra tjänster</h2>
@@ -141,6 +162,12 @@
             </div>
         </section>
         <section id="about">
+            <svg class="about-bubbles transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 600">
+                <g class="golden-group" filter="url(#goo)">
+                    <use class="golden-2 transition-all" xlink:href="#golden-2" />
+                    <use class="golden-3 transition-all" xlink:href="#golden-3" />
+                </g>
+            </svg>
             <div class="row">
                 <div class="col">
                     <h2>Om oss</h2>
@@ -186,6 +213,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 m-auto">
+                    <svg class="testimonials-bubbles transition-all" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+                        <g class="golden-group" filter="url(#goo)">
+                            <use class="golden-2 transition-all" xlink:href="#golden-2" />
+                            <use class="golden-3 transition-all" xlink:href="#golden-3" />
+                            <use class="golden-4 transition-all" xlink:href="#golden-4" />
+                        </g>
+                    </svg>
                     <div class="quotes">
                         <blockquote id="noro" class="active">
                             <p>"Under Ulfs period som styrelseordförande stod NORO inför särskilt viktiga utvecklingsfrågor. Till slut även en försäljning 2017 till branschkollegan Hafa. Med sin djupa erfarenhet hjälpte Ulf oss att navigera rätt i ett antal svåra passager."</p>
@@ -239,14 +273,38 @@
         var active = document.querySelector( 'blockquote' ),
             next = active.nextElementSibling;
         setInterval( flipQuote, 7000 );
+
         function flipQuote() {
             active.classList.toggle( 'active' );
             next.classList.toggle( 'active' );
             active = next;
             next = active.nextElementSibling || document.querySelector( 'blockquote' );
         }
+
+        function animate() {
+            var circs = document.querySelectorAll( "circle" );
+            circs.forEach( function( circ ) {
+                TweenMax.to( circ, ( 5 + Math.random() * 3 ), { yPercent: 50, repeat: -1, yoyo: true, ease: Power2.easeInOut } );
+            } )
+
+        }
+
+        // animate();
     } )()
     </script>
+    <svg xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 0;">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur result="blur" in="SourceGraphic" stdDeviation="10" />
+                <feColorMatrix result="contrast" in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 50 -20" />
+            </filter>
+            <circle id="golden-1" r="105" fill="#86A7D5" />
+            <circle id="golden-2" r="65" fill="#6886B0" />
+            <circle id="golden-3" r="40" fill="#4A668C" />
+            <circle id="golden-4" r="25" fill="#364B68" />
+            <circle id="golden-5" r="15" fill="#28384E" />
+        </defs>
+    </svg>
 </body>
 
 </html>

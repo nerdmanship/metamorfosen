@@ -72,6 +72,11 @@ section {
     margin: 150px 0;
 }
 
+section,
+header {
+    position: relative;
+}
+
 
 .card {
     border: none;
@@ -82,7 +87,7 @@ section {
 .grad-box {
     position: absolute;
     z-index: -1;
-    height: 20px;
+    height: 10px;
     width: 100%;
     top: 0;
     background: linear-gradient(45deg, $meta-dark 25%, $meta-mid 25%, $meta-mid 60%, $meta-light 60%);
@@ -96,8 +101,10 @@ section {
 }
 
 #header {
-    img { width: 240px; }
     margin-top: 100px;
+    img {
+        width: 240px;
+    }
     .fatty {
         font-weight: 700;
     }
@@ -284,15 +291,14 @@ section {
 #testimonials {
     .quotes {
         position: relative;
-        min-height: 200px;
+        //min-height: 200px;
     }
-
     .quotes blockquote {
         position: absolute;
         top: 0;
         opacity: 0;
         transition: opacity 1s ease;
-        display: none;
+        // display: none;
         p:first-child {
             font-size: 1.2rem;
             font-style: italic;
@@ -310,9 +316,12 @@ section {
             text-transform: uppercase;
         }
     }
+    blockquote#prospect {
+        position: relative;
+    }
 
     .quotes .active {
-        display: block;
+        // display: block;
         opacity: 1;
         animation-name: fadeIn;
         animation-duration: 7s;
@@ -331,7 +340,7 @@ section {
     }
     p {
         margin: 0;
-       color: transparentize(lighten($meta-dark, 35%), 0.1);
+        color: transparentize(lighten($meta-dark, 35%), 0.1);
     }
     .copyright {
         margin-top: 10px;
@@ -354,4 +363,117 @@ section {
     100% {
         opacity: 0
     }
+}
+
+
+.header-bubbles {
+    @include media-breakpoint-up(xs) {
+        position: absolute;
+        z-index: -1;
+        top: -100px;
+        right: 0px;
+        width: 300px;
+        overflow: visible !important;
+        // border: 1px solid red;
+        .golden-group { transform: translate(200px, 0px); }
+        .golden-1 { transform: translate(110px, 210px); }
+        .golden-2 { transform: translate(190px, 110px); }
+        .golden-3 { transform: translate(10px, 530px); }
+        .golden-4 { transform: translate(40px, 565px); }
+        .golden-5 { transform: translate(100px, 580px); }
+    }
+    @include media-breakpoint-up(sm) {
+        .golden-group { transform: translate(150px, 0px); }
+        .golden-1 { transform: translate(110px, 150px); }
+        .golden-2 { transform: translate(190px, 230px); }
+        .golden-3 { transform: translate(120px, 460px); }
+        .golden-4 { transform: translate(90px, 515px); }
+        .golden-5 { transform: translate(150px, 570px); }
+    }
+    @include media-breakpoint-up(md) {
+        width: 350px;
+        .golden-group { transform: translate(130px, 0px); }
+        .golden-1 { transform: translate(110px, 150px); }
+        .golden-2 { transform: translate(170px, 230px); }
+        .golden-3 { transform: translate(70px, 360px); }
+        .golden-4 { transform: translate(50px, 415px); }
+        .golden-5 { transform: translate(100px, 500px); }
+    }
+    @include media-breakpoint-up(lg) {
+        .golden-group { transform: translate(50px, 0px); }
+    }
+}
+
+.competence-bubbles {
+    @include media-breakpoint-up(xs) {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 300px;
+        overflow: visible !important;
+        // border: 1px solid red;
+        .golden-group { transform: translate(200px, -20px) scale(.5); }
+        .golden-1 { transform: translate(0px, 0px); }
+        .golden-2 { transform: translate(50px, 100px); }
+    }
+    @include media-breakpoint-up(md) {
+        .golden-group { transform: translate(50px, 50px) scale(1.5); }
+        .golden-1 { transform: translate(0px, 0px); }
+        .golden-2 { transform: translate(-50px, 100px); }
+    }
+}
+
+.services-bubbles {
+    @include media-breakpoint-up(xs) {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        width: 300px;
+        overflow: visible !important;
+        // border: 1px solid red;
+        .golden-group { transform: translate(300px, -150px) scale(1); }
+        .golden-3 { transform: translate(20px, 0px); }
+        .golden-4 { transform: translate(-20px, 40px); }
+        .golden-5 { transform: translate(0px, 100px); }
+    }
+}
+
+.about-bubbles {
+    @include media-breakpoint-up(xs) {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 300px;
+        overflow: visible !important;
+        // border: 1px solid red;
+        .golden-group { transform: translate(0px, -130px) scale(1.5); }
+        .golden-2 { transform: translate(0px, 0px); }
+        .golden-3 { transform: translate(80px, 30px); }
+    }
+}
+
+.testimonials-bubbles {
+    @include media-breakpoint-up(xs) {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: visible !important;
+        // border: 1px solid red;
+        .golden-group { transform: translate(400px, -150px) scale(1); }
+        .golden-2 { transform: translate(0px, 0px); }
+        .golden-3 { transform: translate(80px, -20px); }
+        .golden-4 { transform: translate(150px, 80px) scale(0.8); }
+    }
+    @include media-breakpoint-up(lg) {
+        .golden-group { transform: translate(400px, -100px) scale(1); }
+    }
+}
+
+.transition-all {
+    transition: all 0.5s ease;
 }
