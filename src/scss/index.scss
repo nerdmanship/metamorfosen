@@ -50,6 +50,9 @@ h2 {
 h3 {
     color: $meta-dark;
     font-size: 1.3rem;
+    @include media-breakpoint-down(md) {
+        font-size: 1.15rem;
+    }
 }
 
 
