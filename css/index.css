@@ -6963,6 +6963,9 @@ h2 {
 h3 {
   color: #27384e;
   font-size: 1.3rem; }
+  @media (max-width: 991.98px) {
+    h3 {
+      font-size: 1.15rem; } }
 
 h4 {
   color: rgba(39, 56, 78, 0.75);
