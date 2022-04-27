@@ -7017,9 +7017,23 @@ header {
     color: rgba(39, 56, 78, 0.75);
     letter-spacing: 1px; }
 
-#intro .intro-border {
+#food-and-wine {
+    --food-and-wine-blue: #6886B0;
+  }
+
+#food-and-wine .food-and-wine-border {
+  border: 2px solid var(--food-and-wine-blue);
+  padding: 30px; }
+
+#food-and-wine h3,
+#food-and-wine p,
+#food-and-wine li,
+#food-and-wine a  {
+  color: var(--food-and-wine-blue); }
+
+/* #intro .intro-border {
   border-top: 5px solid #27384e;
-  padding-top: 30px; }
+  padding-top: 30px; } */
 
 #intro svg {
   width: 50px;
